@@ -1,6 +1,5 @@
 import requests
 import datetime
-import locale
 
 today = datetime.datetime.now().strftime('%Y-%m-%d')
 precio_dolar = round(float(requests.get('https://www.datos.gov.co/resource/ceyp-9c7c.json?vigenciadesde=' + today + 'T00:00:00').json()[0]['valor']),2)
