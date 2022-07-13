@@ -9,6 +9,7 @@ option = int(input('''
          Elija una opción:
      1.- Convertir pesos a dolares.
      2.- Conventir dolares a pesos.
+     3.- Consultar valor del dolar.
 --------------------------------------
        Ingresa tu opción: '''))
 
@@ -21,6 +22,8 @@ def conversor():
         dolares = round(float(input('¿Cuantos dolares desea convertir?: ')),2)
         dolar_pesos = str(round(dolares * precio_dolar,2))
         print('Serian $' + dolar_pesos + ' pesos.')
+    elif option ==3:
+        print(f'El valor del dolar para el día de hoy es de: ${precio_dolar} por dolar.')
     else:
         print('¡Opción invalida!')
 
