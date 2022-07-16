@@ -11,7 +11,11 @@ def tabla_multiplicar(numero):
 
 
 def run():
-    multiplicando = int(input('Ingrese el número del que desea conocer la tabla de multiplicar: '))
+    multiplicando = input('Ingrese el número del que desea conocer la tabla de multiplicar: ')
+    try:
+        int(multiplicando)
+    except:
+        print('¡Error! El programa solo acepta números. Intente de nuevo')
     tabla_multiplicar(multiplicando)
 
 
