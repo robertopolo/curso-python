@@ -1,9 +1,10 @@
-x = 0
-z = True
+import locale
 
-while z:
-    if x < 100:
-        x += 1
-        print(x)
-    else:
-        z = False
+ubication = locale.getlocale()
+locale.setlocale(locale.LC_ALL, ubication)
+valor = 2750000
+dinero = '{:,d}'.format(valor) 
+
+print(ubication)
+print(dinero)
+
