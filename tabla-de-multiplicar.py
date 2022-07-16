@@ -7,7 +7,11 @@
 
 
 def menu():
-    x = input('Ingrese el número del que desea conocer la tabla de multiplicar: ')
+    x = input('''
+            ***¡Bienvenido!***
+¿Cuál tabla de multiplicar deseas consultar?:
+''')
+    print('')
     
     try:
         x = int(x)
