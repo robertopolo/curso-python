@@ -4,6 +4,7 @@ import operator
 
 today = datetime.now()
 url = 'https://www.datos.gov.co/resource/ceyp-9c7c.json?vigenciadesde='
+separators = str.maketrans('.,', ',.')
 
 
 def get_trm(actual_date):
@@ -54,6 +55,7 @@ def conversor(option_selected, dolar):
             print('¡ERROR! Elija una opción correcta.')
     
     c = round(float(b[option_selected - 1](z, dolar)), 2)
+    c = f'{c:,}'.translate(separators)
     print(f'Serian $ {c} {a[option_selected * - 1]}')
     
 

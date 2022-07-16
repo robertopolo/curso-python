@@ -1,10 +1,8 @@
-import locale
+numero = 1234567456456.89
+miles_translator = str.maketrans(".,", ",.")
+numero = f"{numero:,}".translate(miles_translator)
+print(numero)
+# O si no quieres usar f-strings:
 
-ubication = locale.getlocale()
-locale.setlocale(locale.LC_ALL, ubication)
-valor = 2750000
-dinero = '{:,d}'.format(valor) 
-
-print(ubication)
-print(dinero)
-
+miles_translator = str.maketrans(".,", ",.")
+numero = "{:,}".format(numero).translate(miles_translator)
