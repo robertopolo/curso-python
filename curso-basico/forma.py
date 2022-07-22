@@ -2,7 +2,7 @@ import math
 
 
 def menu():
-    selection = input('Ingrese la extensión de la forma: ')
+    selection = input('Ingrese la extensión de la forma que desea representar: ')
     
     try:
         selection = int(selection)
